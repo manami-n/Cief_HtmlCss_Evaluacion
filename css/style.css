@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: normal;
+    font-family: "Lato", Arial, sans-serif;
+    text-decoration: none;
+    font-size: 1.15rem;
+    box-sizing: border-box;
+}
+
+:root{
+    --core-color-green : #053617;
+    ---font-color-white : #fff;
+    ---font-color-black : #000;
+    --menu-max-width: 1000px;
+}
+.global-width{
+    max-width: var(--menu-max-width);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 
+    ====================================
+    Header
+    ====================================
+*/
+header img{
+    width: 100%;
+    position: relative;
+}
+h1{
+    font-family: "Dancing Script", cursive;
+    font-size: 8vw;
+    font-weight: 600;
+    color: var(---font-color-white);
+    position: absolute;
+    top: 4vw;
+    right:4vw;
+}
+
+/* 
+    ====================================
+    Nav
+    ====================================
+*/
+nav{
+    background-color: var(--core-color-green);
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a{
+    display: block;
+    color: var(---font-color-white);
+    margin: 20px ;
+}
+
+nav ul li .current::before{
+    background-color: var(---font-color-white);
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+
+}
+/* 
+    ====================================
+    Main
+    ====================================
+*/
+main h2{
+    font-family: "Dancing Script", cursive;
+    font-weight: 500;
+    font-size: 4vw;
+    padding-bottom: 10px;
+}
+
+#maininfo>div:nth-child(even){
+    background-color: var(--core-color-green);
+    color: var(---font-color-white);
+}
+
+#maininfo article{
+    display: flex;
+    justify-content: space-between;
+}
+
+#maininfo>div:nth-child(even) article div{
+    margin: auto 15px auto 0px;
+}
+
+
+#maininfo article div{
+    margin: auto 0px auto 15px;
+}
+
+#maininfo article div{
+    margin: auto 0px auto 15px;
+}
+
+#maininfo img, #maininfo video{
+    width: 50%;
+}
+
+#testimonials{
+    margin: 50px auto;
+}
+
+#testimonials h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#testimonials div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#testimonials blockquote{
+    width: 28%;
+    font-style: italic;
+}
+
+#testimonials cite{
+    font-style: normal;
+    text-align: right;
+    display: block;
+    color: red;
+}
+
+/* 
+    ====================================
+    Footer
+    ====================================
+*/
+
+footer{
+    background-color: var(--core-color-green);
+    color: var(---font-color-white);
+    padding-top: 60px;
+    padding-bottom: 60px
+}
+footer>div{
+    display: grid;
+    grid-template-columns: 2fr auto auto auto auto;
+}
+
+footer .footermenu{
+    margin-left: 30px;
+}
+
+footer h2{
+    font-weight: 500;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+#contact p a{
+    color: var(---font-color-white);
+    font-size: 1.1em;
+}
+footer a:hover{
+    opacity: 0.7;
+}
+
+#rs{
+    display: flex;
+    margin-top: 20px;
+    gap: 40px;
+}
+#rs img{
+    width: 40px;
+}
+
+footer ul li a{
+    font-size: 0.7em;
+    color: var(---font-color-white);
+    font-weight: 300;
+}
