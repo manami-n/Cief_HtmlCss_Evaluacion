@@ -1,0 +1,111 @@
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Manami">
+    <meta name="description" content="Cafè deliciós per a totes les ocasions.">
+    <meta name="keywords" content="cafès, cafe, natural, sostenible">
+    <meta name="copyright" content="Manami">
+    <meta name="robots" content="noindex">
+    <title>Sobre nosatres | Cafés del Món</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+        <!-- 
+    ====================================
+    Header
+    ====================================
+    -->
+    <header>
+        <picture>
+            <source srcset="img/tienda_2000px.avif" media="(min-width:2000px)">
+            <source srcset="img/tienda_1400px.avif" media="(min-width:1400px)">
+            <source srcset="img/tienda_800px.avif" media="(min-width:800px)">
+            <img src="img/nosaltres_500px.avif" alt="Bolsa de Café">
+        </picture>            
+        <h1>Sobre nosatres</h1>
+    </header>
+
+    <!-- 
+    ====================================
+    Nav
+    ====================================
+    -->
+    <main>
+        <nav>
+            <ul class="global-width">
+                <li class="navli"><a href="/index.html">Inici</a></li>
+                <li class="navli"><a href="/varietats.html" class="varietats.html">Varietats</a></li>
+                <li class="navli"><a href="/botiga.html" class="botiga.html">Botiga</a></li>
+                <li class="navli"><a href="/nosaltres.html" class="nosaltres.html">Sobre nosaltres</a></li>
+            </ul>
+        </nav>
+    <!-- 
+    ====================================
+    Main Contents
+    ====================================
+    --> 
+    <div class="espacioPaginaBlanca">
+    </div>
+    </main>
+    <!-- 
+    ====================================
+    Footer
+    ====================================
+    -->
+    <footer>
+        <div class="global-width">
+            <div id="contact">
+                <h2>Contacte</h2>
+                <p><a href="mailto:info@cafesdelmon.com">info@cafesdelmon.com</a></p>
+                <div id="rs">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="logos/facebook.png" alt="Facebook"></a>
+                    <a href="https://twitter.com/" target="_blank"><img src="logos/twitter.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="logos/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footermenu">
+                <h2>Enllaços utils</h2>
+                <ul>
+                    <li><a href="#">Notícies de prensa</a></li>
+                    <li><a href="#">El nostres productes</a></li>
+                    <li><a href="#">Plans per a empreses</a></li>
+                    <li><a href="#">Afiliats</a></li>
+                </ul>
+            </div>
+            <div class="footermenu">
+                <h2>Comprar</h2>
+                <ul>
+                    <li><a href="#">Partículars</a></li>
+                    <li><a href="#">Empreses</a></li>
+                    <li><a href="#">Subscripcions</a></li>
+                </ul>
+            </div>
+            <div class="footermenu">
+                <h2>Conèixer el cafè</h2>
+                <ul>
+                    <li><a href="#">Videos</a></li>
+                </ul>
+            </div>
+            <div class="footermenu">
+                <h2>Ajuda</h2>
+                <ul>
+                    <li><a href="#">Preguntes freqüents</a></li>
+                    <li><a href="#">Devolucions</a></li>
+                    <li><a href="#">Servei tècnic</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+    var currentUrl = location.pathname;
+    var navLinks = document.querySelectorAll(".navli a");
+    navLinks.forEach(function(link){
+        if(link.getAttribute("href") === currentUrl){
+        link.classList.add("current")
+        }
+    });
+    </script>
+    </body>
+</html>

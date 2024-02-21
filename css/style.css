@@ -1,4 +1,7 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/*  Global Setting  */
 
 *{
     margin: 0;
@@ -28,6 +31,7 @@
     Header
     ====================================
 */
+
 header img{
     width: 100%;
     position: relative;
@@ -49,6 +53,8 @@ h1{
 */
 nav{
     background-color: var(--core-color-green);
+    position: sticky;
+    top: -1;
 }
 
 nav ul{
@@ -62,53 +68,60 @@ nav ul li a{
     margin: 20px ;
 }
 
-nav ul li .current::before{
+ /* current marker nav and its animation */
+
+nav ul li a::before{
     background-color: var(---font-color-white);
     content: "";
     display: block;
     height: 5px;
-    width: 100%;
+    width: 0%;
+    transition: 0.7s width;
+}
 
+nav ul li:hover a::before{
+    width: 100%;
+}
+
+nav ul li .current::before{
+    width: 100%;
 }
 /* 
     ====================================
-    Main
+    Index Main
     ====================================
 */
 main h2{
     font-family: "Dancing Script", cursive;
     font-weight: 500;
-    font-size: 4vw;
+    font-size: max(4vw, 28px);
     padding-bottom: 10px;
 }
 
-#maininfo>div:nth-child(even){
-    background-color: var(--core-color-green);
-    color: var(---font-color-white);
-}
-
-#maininfo article{
+#maininfo article>div{
     display: flex;
     justify-content: space-between;
 }
 
-#maininfo>div:nth-child(even) article div{
-    margin: auto 15px auto 0px;
-}
-
-
-#maininfo article div{
-    margin: auto 0px auto 15px;
-}
-
-#maininfo article div{
-    margin: auto 0px auto 15px;
+#maininfo div>div{
+    margin: auto 15px;
 }
 
 #maininfo img, #maininfo video{
     width: 50%;
 }
 
+/* Adjustment for even articles */
+#maininfo article:nth-child(even){
+    background-color: var(--core-color-green);
+    color: var(---font-color-white);
+}
+
+#maininfo>article:nth-child(even) div{
+    flex-direction: row-reverse;
+}
+
+/* Testimonials */
 #testimonials{
     margin: 50px auto;
 }
@@ -147,13 +160,19 @@ footer{
     padding-top: 60px;
     padding-bottom: 60px
 }
+
+footer a{
+    transition: 0.5s opacity;
+}
+
+footer a:hover{
+    opacity: 0.6;
+}
+
 footer>div{
     display: grid;
     grid-template-columns: 2fr auto auto auto auto;
-}
-
-footer .footermenu{
-    margin-left: 30px;
+    grid-gap: 30px;
 }
 
 footer h2{
@@ -162,25 +181,35 @@ footer h2{
     margin-bottom: 10px;
 }
 
+/* Left */
 #contact p a{
     color: var(---font-color-white);
     font-size: 1.1em;
 }
-footer a:hover{
-    opacity: 0.7;
-}
 
-#rs{
+#contact #rs{
     display: flex;
     margin-top: 20px;
     gap: 40px;
 }
-#rs img{
+#contact #rs img{
     width: 40px;
 }
 
+/* Right */
 footer ul li a{
     font-size: 0.7em;
     color: var(---font-color-white);
     font-weight: 300;
+}
+
+/* 
+    ====================================
+    Caja para mostrar estilos y nav-sticky en paginas blancas
+    ====================================
+*/
+
+.espacioPaginaBlanca{
+    height: 800px;
+    width: var(--menu-max-width);
 }
