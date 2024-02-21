@@ -159,13 +159,13 @@
     </footer>
     <script>
      /* Nota: Supuestamente no deberíamos usar js así que no hice un fichero externo de .js aunque sea algo repetitivo en cada pagina*/
-        var currentUrl = location.pathname;
-        var navLinks = document.querySelectorAll(".navli a");
-        navLinks.forEach(function(link){
-             if(link.getAttribute("href") === currentUrl){
-             link.classList.add("current")
-            }
-        });
+    var currentUrl = location.pathname;
+    var navLinks = document.querySelectorAll(".navli a");
+    navLinks.forEach(function(link){
+        if(link.getAttribute("href") === currentUrl){
+        link.classList.add("current")
+        }
+    });
     </script>
 </body>
 </html>
